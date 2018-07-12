@@ -21,12 +21,15 @@ var message = {
 //DON'T TOUCH THE CODE ABOVE
 message['text'] = "I dont know";
 
-// #4 Create an object called 'adjustCount' and create two methods. One called 'upVote' and one called 'downVote'. upVote should take in a number and add one to it and downVote should take in a number and minus one from it.
+// #4 Create an object called 'adjustCount' and create two methods. 
+// One called 'upVote' and one called 'downVote'. 
+// upVote should take in a number and add one to it 
+// and downVote should take in a number and minus one from it.
 
-//var adjustCount = {
-  //upVote: function(){},
-  //downVote: function(){}
-//}
+var adjustCount = {
+  upVote: function(x){return x+1},
+  downVote: function(x){return x-1}
+};
 
 // #5 Create an array called 'myFriends' with four of your friends names
 
@@ -61,9 +64,7 @@ function evensOnly() {
 }
 
 // #9 Using filter(), return only your friends of the array of people below. 
-//Assign it to a variable called 'trueFriends'.
-
-var trueFriends = peopleIknow.filter(function(){});
+// Assign it to a variable called 'trueFriends'.
 
 var peopleIknow = [
   { name: "Steve", friend: true },
@@ -73,6 +74,9 @@ var peopleIknow = [
   { name: "Michelle", friend: false },
   { name: "Holly", friend: true }
 ];
+var trueFriends = peopleIknow.filter(function(person){
+  return person.friend;
+});
 
 // #10 Create a function called indexFinder that will loop over an array and return a new array of the indexes of the contents e.g. [243, 123, 4, 12] would return [0,1,2,3]. 
 // Create a new variable called 'indexes' and set it to contain the indexes of randomNumbers.
